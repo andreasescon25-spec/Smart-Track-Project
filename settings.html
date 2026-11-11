@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings | Smart Track</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="settings">
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="dashboard.html"><span class="brand-mark">▥</span><span>Smart Track</span></a>
+  <div class="store-select">
+    <span class="store-icon">⌂</span>
+    <span class="store-copy"><strong>Santos Mini Mart</strong><small>Quezon City</small></span>
+    <span class="chevrons">⌃<br>⌄</span>
+  </div>
+  <p class="nav-label">WORKSPACE</p>
+  <nav class="nav">
+    <a href="dashboard.html" data-page="dashboard"><span class="nav-icon">⊞</span>Dashboard</a>
+    <a href="cashflow.html" data-page="cashflow"><span class="nav-icon">↔</span>Cashflow (In/Out)</a>
+    <a href="inventory.html" data-page="inventory"><span class="nav-icon">⬡</span>Inventory &amp; Assets</a>
+    <a href="credit.html" data-page="credit"><span class="nav-icon">▤</span>Store Credit (Utang)</a>
+    <a href="reports.html" data-page="reports"><span class="nav-icon">▥</span>Reports</a>
+    <a href="settings.html" data-page="settings"><span class="nav-icon">⚙</span>Settings</a>
+  </nav>
+  <div class="sidebar-bottom"><span class="avatar">AS</span><span><strong>Store Assistant</strong><small>Demo Account</small></span></div>
+</aside><main class="main-content">
+<header class="topbar">
+  <button class="mobile-menu" id="mobileMenu" aria-label="Open navigation">☰</button>
+  <span class="crumb-home">⌂</span>
+  <span>Santos Mini Mart</span>
+  <span class="crumb-divider">/</span>
+  <strong>Settings</strong>
+  <div class="topbar-right"><span class="top-date" id="currentDate"></span><span class="top-avatar">AS</span></div>
+</header><div class="page-container"><section class="page-heading"><div><h1>Settings</h1><p>Make Smart Track work for your store, your team and your customers.</p></div></section>
+<section class="panel settings-panel">
+<div class="settings-tabs"><button class="settings-tab active" data-settings="store">Store Profile</button><button class="settings-tab" data-settings="cashiers">Cashiers &amp; Roles</button><button class="settings-tab" data-settings="payments">E-Wallets &amp; Payments</button><button class="settings-tab" data-settings="notifications">Notifications</button><button class="settings-tab" data-settings="backup">Backup &amp; Export</button></div>
+<div class="settings-content" id="settings-store"><div class="settings-intro"><h2>Store Profile &amp; E-Wallets</h2><p>Update your store information, connected payment accounts and cashier access in one place.</p></div><div class="settings-columns"><article class="inner-panel"><h3>Store Information</h3><p>Manage the details that appear on your store profile and receipts.</p><form class="demo-form settings-form"><div class="form-two"><label>Store Name<input value="Santos Mini Mart"></label><label>Location / Address<input value="Quezon City"></label></div><div class="form-two"><label>Base Currency<select><option>PHP - ₱</option></select><small>Used across sales, reports and store credit.</small></label><label>Receipt Header Text<textarea rows="3">Santos Mini Mart&#10;Quezon City&#10;Thank you for shopping with us!</textarea></label></div><p class="helper-text">▤ Your receipt header is printed at the top of every customer receipt.</p><button class="btn btn-primary">Save Changes (Demo)</button></form></article><article class="inner-panel"><h3>Connected Payments</h3><p>Choose the payment methods accepted by your store.</p><div class="payment-item"><span class="payment-logo">₱</span><div><strong>Cash on Hand</strong><small>Active</small></div></div><div class="payment-item"><span class="payment-logo gcash">G</span><div><strong>GCash Account</strong><small>Connected · Phone ending 1234</small></div></div><div class="payment-item"><span class="payment-logo maya">m</span><div><strong>Maya Account</strong><small>Connected</small></div></div><p class="helper-text">♧ Account numbers are protected.</p></article></div></div>
+<div class="settings-content hidden" id="settings-cashiers"><div class="settings-intro"><h2>Cashiers &amp; Roles</h2><p>Manage the people who can access your store workspace.</p></div><article class="inner-panel"><div class="panel-heading"><h3>Team Members</h3><button class="btn btn-primary" onclick="alert('Add cashier will be connected in the backend phase.')">＋ Add Cashier</button></div><p>Store Assistant · Administrator access</p><p>Additional cashier accounts can be configured when authentication is connected.</p></article></div>
+<div class="settings-content hidden" id="settings-payments"><div class="settings-intro"><h2>E-Wallets &amp; Payments</h2><p>View the payment methods accepted by your store.</p></div><article class="inner-panel"><div class="payment-item"><span class="payment-logo">₱</span><div><strong>Cash</strong><small>Active</small></div></div><div class="payment-item"><span class="payment-logo gcash">G</span><div><strong>GCash</strong><small>Connected (sample)</small></div></div><div class="payment-item"><span class="payment-logo maya">m</span><div><strong>Maya</strong><small>Connected (sample)</small></div></div></article></div>
+<div class="settings-content hidden" id="settings-notifications"><div class="settings-intro"><h2>Notifications</h2><p>Choose which store alerts you want to see.</p></div><article class="inner-panel"><label class="switch-row">Low stock alerts <input type="checkbox" checked></label><label class="switch-row">Customer debt reminders <input type="checkbox" checked></label><label class="switch-row">Daily cashflow summary <input type="checkbox"></label></article></div>
+<div class="settings-content hidden" id="settings-backup"><div class="settings-intro"><h2>Backup &amp; Export</h2><p>Prepare a copy of your store records.</p></div><article class="inner-panel"><h3>Data backup</h3><p>Backup and export features will be connected when the data storage and backend are implemented.</p><button class="btn btn-primary" onclick="alert('Backup feature will be implemented in the backend phase.')">Create Backup (Preview)</button></article></div>
+</section>
+</div>
+<footer class="footer">Smart Track · Sales, Inventory and Debt Management System</footer>
+<script src="assets/js/script.js"></script></main>
+</body>
+</html>
