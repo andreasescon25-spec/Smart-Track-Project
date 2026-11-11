@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | Smart Track</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="dashboard">
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="dashboard.html"><span class="brand-mark">▥</span><span>Smart Track</span></a>
+  <div class="store-select">
+    <span class="store-icon">⌂</span>
+    <span class="store-copy"><strong>Santos Mini Mart</strong><small>Quezon City</small></span>
+    <span class="chevrons">⌃<br>⌄</span>
+  </div>
+  <p class="nav-label">WORKSPACE</p>
+  <nav class="nav">
+    <a href="dashboard.html" data-page="dashboard"><span class="nav-icon">⊞</span>Dashboard</a>
+    <a href="cashflow.html" data-page="cashflow"><span class="nav-icon">↔</span>Cashflow (In/Out)</a>
+    <a href="inventory.html" data-page="inventory"><span class="nav-icon">⬡</span>Inventory &amp; Assets</a>
+    <a href="credit.html" data-page="credit"><span class="nav-icon">▤</span>Store Credit (Utang)</a>
+    <a href="reports.html" data-page="reports"><span class="nav-icon">▥</span>Reports</a>
+    <a href="settings.html" data-page="settings"><span class="nav-icon">⚙</span>Settings</a>
+  </nav>
+  <div class="sidebar-bottom"><span class="avatar">AS</span><span><strong>Store Assistant</strong><small>Demo Account</small></span></div>
+</aside><main class="main-content">
+<header class="topbar">
+  <button class="mobile-menu" id="mobileMenu" aria-label="Open navigation">☰</button>
+  <span class="crumb-home">⌂</span>
+  <span>Santos Mini Mart</span>
+  <span class="crumb-divider">/</span>
+  <strong>Dashboard</strong>
+  <div class="topbar-right"><span class="top-date" id="currentDate"></span><span class="top-avatar">AS</span></div>
+</header><div class="page-container"><section class="page-heading"><div><h1>Dashboard</h1><p>Here is your store’s activity at a glance.</p></div><button class="btn btn-outline" onclick="window.print()">↓ Export Summary</button></section>
+<section class="stats-grid">
+  <article class="stat-card"><div class="stat-top"><span>Today’s Net Cashflow</span><span class="stat-icon">↗</span></div><strong class="stat-value positive">₱8,640.00</strong><small>Income minus expenses</small><span class="stat-foot positive-text">↑ 8.4% from yesterday</span></article>
+  <article class="stat-card"><div class="stat-top"><span>Cash on Hand</span><span class="stat-icon">₱</span></div><strong class="stat-value">₱12,480.00</strong><small>Available store cash</small><span class="stat-foot">Updated today</span></article>
+  <article class="stat-card"><div class="stat-top"><span>Total Inventory Asset Value</span><span class="stat-icon">▣</span></div><strong class="stat-value">₱18,490.00</strong><small>Current inventory value</small><span class="stat-foot">8 inventory items</span></article>
+</section>
+<section class="dashboard-grid">
+  <article class="panel chart-panel"><div class="panel-heading"><div><h2>Cashflow Overview</h2><p>Income and expenses for the last 7 days</p></div><select class="small-select"><option>Last 7 days</option><option>This month</option></select></div>
+    <div class="chart-legend"><span><i class="legend-dot income"></i>Income</span><span><i class="legend-dot expense"></i>Expenses</span></div>
+    <div class="bar-chart">
+            <div class="bar-column"><div class="bars"><span class="bar-income" style="height:65%"></span><span class="bar-expense" style="height:30%"></span></div><small>Mon</small></div>
+            <div class="bar-column"><div class="bars"><span class="bar-income" style="height:78%"></span><span class="bar-expense" style="height:40%"></span></div><small>Tue</small></div>
+            <div class="bar-column"><div class="bars"><span class="bar-income" style="height:52%"></span><span class="bar-expense" style="height:26%"></span></div><small>Wed</small></div>
+            <div class="bar-column"><div class="bars"><span class="bar-income" style="height:88%"></span><span class="bar-expense" style="height:42%"></span></div><small>Thu</small></div>
+            <div class="bar-column"><div class="bars"><span class="bar-income" style="height:70%"></span><span class="bar-expense" style="height:36%"></span></div><small>Fri</small></div>
+            <div class="bar-column"><div class="bars"><span class="bar-income" style="height:96%"></span><span class="bar-expense" style="height:50%"></span></div><small>Sat</small></div>
+            <div class="bar-column"><div class="bars"><span class="bar-income" style="height:62%"></span><span class="bar-expense" style="height:28%"></span></div><small>Sun</small></div>
+          </div>
+  </article>
+  <article class="panel low-stock-panel"><div class="panel-heading"><div><h2>Low Stock Alert</h2><p>Products that need attention</p></div><span class="alert-count">2</span></div>
+    <div class="alert-item"><span class="product-emoji">🍜</span><div><strong>Instant Noodles</strong><small>8 units remaining</small></div><span class="pill pill-danger">Low</span></div>
+    <div class="alert-item"><span class="product-emoji">🥛</span><div><strong>Fresh Milk</strong><small>5 units remaining</small></div><span class="pill pill-danger">Low</span></div>
+    <a class="text-link" href="inventory.html">View inventory →</a>
+  </article>
+</section>
+<section class="panel table-panel"><div class="panel-heading"><div><h2>Recent Transactions</h2><p>Your latest store activities</p></div><a class="text-link" href="cashflow.html">View all →</a></div>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>Date / Time</th><th>Transaction ID</th><th>Category</th><th>Payment Type</th><th>Description</th><th>Amount</th></tr></thead><tbody><tr><td>Oct 5, 2026 · 2:42 PM</td><td>CF-261005-010</td><td>Retail sale</td><td>Cash</td><td>Rice 2 kg, eggs &amp; canned goods</td><td><strong>₱1,240.00</strong></td></tr><tr><td>Oct 5, 2026 · 1:18 PM</td><td>CF-261005-009</td><td>Credit payment</td><td>GCash</td><td>Customer debt payment</td><td><strong>₱540.00</strong></td></tr><tr><td>Oct 5, 2026 · 11:05 AM</td><td>CF-261005-008</td><td>Restocking</td><td>Cash</td><td>Beverages and grocery supplies</td><td><strong>₱1,800.00</strong></td></tr></tbody></table></div></section>
+</div>
+<footer class="footer">Smart Track · Sales, Inventory and Debt Management System</footer>
+<script src="assets/js/script.js"></script></main>
+</body>
+</html>
